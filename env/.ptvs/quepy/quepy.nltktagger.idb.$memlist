@@ -1,0 +1,6 @@
+penn_to_morphy_tag
+run_nltktagger
+nltk
+Word
+_penn_to_morphy_tag
+assert_valid_encoding

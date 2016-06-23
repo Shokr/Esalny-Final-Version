@@ -1,0 +1,4 @@
+EndPointNotFound
+QueryBadFormed
+SPARQLWrapperException
+EndPointInternalError

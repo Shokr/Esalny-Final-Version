@@ -1,0 +1,9 @@
+Serializer
+__all__
+_xmlcharref_encode
+_quoteLiteral
+warnings
+NQuadsSerializer
+b
+Literal
+_nq_row

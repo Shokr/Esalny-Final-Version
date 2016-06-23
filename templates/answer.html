@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            es2lni v.1 - Answers
+        </title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style00.css') }}">
+</head>
+    <body>
+        <div class="body0">  
+            <div id="headerDiv">
+                <div id="header1">
+                    <div id="searchDivTop">
+                        <form action="{{ url_for('engine') }}" name="topForm" method="POST">
+                            <div style="float: left;"> <input class="txtField" name="question" id="topTxtFld" placeholder="{{question}}"> </div>
+                            <input id="btn" class="btnSearch" type="submit" value="Answer">
+                        </form>
+                    </div>
+                    <div id="topLogoDiv">
+                        <img src="{{ url_for('static', filename='imgs/logoEs2lni4s_.png') }}">
+                    </div>
+                </div>
+            </div>
+            <div id="body1">
+                <div id="bodyContents">
+                    {% if q2[0] == 'what'%}
+                    <code><pre>
+                        {% for result in results["results"]["bindings"] %}
+                            <div style="float: left; margin: 0 0 -350px -350px;"><strong> Answer: </strong> {{ result['x2']['value'] }} </div>
+                        {% endfor %}
+                    </pre></code>
+
+                    {% elif q2[0] == 'who' %}
+                    <code><pre>
+                        {% for result in results["results"]["bindings"] %}
+                            <div style="float: left; margin: 0 0 -350px -350px;"><strong> Answer: </strong> {{ result['x3']['value'] }} </div>
+                        {% endfor %}
+                    </pre></code>
+                    {% endif %}
+
+                </div>
+
+            <!--
+            <div id="bodyContents">
+                <code>
+                    <pre>
+                        {% for result in results["results"]["bindings"] %}
+                            <div style="float: left; margin: 0 0 -350px -350px;"><strong> Answer: </strong> {{ result }} </div>
+                        {% endfor %}
+                    </pre>
+                </code>
+            </div>
+            -->
+
+            </div>      
+        </div>    
+    </body>
+</html>

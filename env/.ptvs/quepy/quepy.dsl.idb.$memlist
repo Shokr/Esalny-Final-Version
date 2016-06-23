@@ -1,0 +1,9 @@
+copy
+HasKeyword
+IsRelatedTo
+FixedType
+encoding_flexible_conversion
+FixedRelation
+Expression
+HasType
+FixedDataRelation
